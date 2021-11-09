@@ -14,7 +14,7 @@
                 <div class="form-row justify-content-center pt-2">
                     <div class="col-md-10">
                         <label for=""><?php _e('Your Post Code', 'solar-calculator'); ?></label>
-                        <input type="text" id="postcode" class="form-control" >
+                        <input type="text" id="postcode" name="postcode" class="form-control" >
                         <small class="text-danger" id="postcodefeed" ></small>
                     </div>
                 </div>

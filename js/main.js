@@ -58,11 +58,15 @@
                 let els = document.querySelectorAll("a[href='#next']");
                 els[0].style.display = 'block';
             }
+
+            if( newIndex === 4 ){
+                /* TODO */
+            }
             
             return true;
         },
         onFinished: function(event, currentIndex) {
-            alert('Sumited');
+            console.log( $('#signup-form').serialize() );
         }
     });
 

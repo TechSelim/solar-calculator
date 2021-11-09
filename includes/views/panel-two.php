@@ -71,7 +71,8 @@
                     </label>                               
                     <label for="no5" class="btn-switch__label btn-switch__label_no">
                         <span class="btn-switch__txt"><?php _e('19-20', 'solar-calculator'); ?></span>
-                    </label>                           
+                    </label>      
+                    <input type="hidden" name="panel_no" id="panel_no" value="0" >                     
                 </p>
             </div>
 

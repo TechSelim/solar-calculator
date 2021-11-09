@@ -802,3 +802,8 @@ fieldset.current {
   padding-top: 40px;
   padding-bottom: 40px;
 }
+.datepicker table th,
+.datepicker table td {
+  font-size: 14px;
+  padding: 0px;
+}

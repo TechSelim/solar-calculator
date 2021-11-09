@@ -4,7 +4,8 @@
     $('.btn-switch__radio_yes').on('click', function(e){
         
         var selectedEl = $(this).val();
-        
+        $('#panel_no').val( selectedEl );
+
         $(".btn-switch__radio_yes").each(function( i, el ){
             el.checked = false;
         });
@@ -31,6 +32,8 @@
     
     $('.btn-switch__radio_no').on('click', function(e){
         var tag = false;
+        $('#panel_no').val( e.value );
+
         $(".btn-switch__radio_yes").each(function( i, el ){
             if(el.checked){
                 tag = true;
@@ -148,5 +151,11 @@
         });
     })
 
+    $('#installation_date').datepicker( {
+        format: 'yyyy-mm-dd',
+        autoclose: true,
+        todayHighlight: true,
+        startDate: '+0d',
+    } );
 
 })(jQuery);

@@ -5,7 +5,7 @@ trait shortcodeTrait{
     function panelWrapBegin(){
         return '<div class="solaorc">
                     <div class="container">
-                        <form method="POST" id="signup-form" class="signup-form" enctype="multipart/form-data">';
+                        <form method="POST" id="signup-form" class="signup-form" >';
     }
     
     function panelWrapEnd(){

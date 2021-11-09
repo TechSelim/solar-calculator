@@ -12,21 +12,21 @@
             <div class="form-row justify-content-center pt-2">
                 <div class="col-md-10">
                     <label for=""><?php _e('No. of elevations', 'solar-calculator'); ?></label>
-                    <input type="text" class="form-control">
+                    <input type="text" name="elevation_no" class="form-control">
                     <small><?php _e('Please specify (if known) the number of elevations of panels you have installed e.g. if you have panels split across two roofs, please specify 2', 'solar-calculator'); ?></small>
                 </div>
             </div>
             <div class="form-row justify-content-center pt-4">
                 <div class="col-md-10">
                     <label for=""><?php _e('Date of Original Installation', 'solar-calculator'); ?></label>
-                    <input type="text" class="form-control" >
+                    <input type="text" name="installation_date" id="installation_date" class="form-control" >
                     <small><?php _e('The date the system was originally installed (if known).', 'solar-calculator'); ?> </small>
                 </div>
             </div>
             <div class="form-row justify-content-center pt-4">
                 <div class="col-md-10">
                     <label for=""><?php _e('Shading', 'solar-calculator'); ?></label>
-                    <textarea name="" id="" cols="3" rows="2" class="form-control"></textarea>
+                    <textarea name="shading" id="shading" cols="3" rows="2" class="form-control"></textarea>
                     <small><?php _e('Please describe any shading issues that effect your system. This might be from a chimney stack, trees or neighbouring buildings.', 'solar-calculator'); ?></small>
                 </div>
             </div>

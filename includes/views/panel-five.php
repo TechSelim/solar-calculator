@@ -3,7 +3,7 @@
             <span class="step-current">
                 <span class="step-current-content">
                     <span class="step-number">
-                        <span><?php _e('05', 'solar-calculator'); ?></span>/<?php _e('/05', 'solar-calculator'); ?></span>
+                        <span><?php _e('05', 'solar-calculator'); ?></span>/<?php _e('05', 'solar-calculator'); ?></span>
                     </span>
                 </span>
             <div class="fieldset-flex">
@@ -98,43 +98,38 @@
                                 </tr>
                                 <tr>
                                     <td><?php _e('Your Solar Panels', 'solar-calculator'); ?></td>
-                                    <td></td>
-                                    <td></td>
+                                    <td id="tbl-total-panel" ></td>
+                                    <td id="tbl-total-panel-price" ></td>
                                 </tr>
                                 <tr class="table-dark">
                                     <th colspan="3"><?php _e('System Details (Optional)', 'solar-calculator'); ?></th>
                                 </tr>
                                 <tr>
                                     <td><?php _e('No. of elevations', 'solar-calculator'); ?></td>
-                                    <td></td>
-                                    <td></td>
+                                    <td id="tbl-elevation" ></td>
+                                    <td id="tbl-elevation-price" ></td>
                                 </tr>
                                 <tr>
                                     <td><?php _e('Date of Original Installation', 'solar-calculator'); ?></td>
-                                    <td></td>
-                                    <td></td>
+                                    <td id="tbl-installation-date" ></td>
+                                    <td id="tbl-installation-date-price" ></td>
                                 </tr>
                                 <tr>
                                     <td><?php _e('Shading', 'solar-calculator'); ?></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td><?php _e('No', 'solar-calculator'); ?></td>
-                                    <td></td>
-                                    <td></td>
+                                    <td id="tbl-shading" ></td>
+                                    <td id="tbl-shading-price" ></td>
                                 </tr>
                                 <tr class="table-dark">
                                     <th colspan="3"><?php _e('Location', 'solar-calculator'); ?></th>
                                 </tr>
                                 <tr>
                                     <td><?php _e('Your Post Code', 'solar-calculator'); ?></td>
-                                    <td></td>
-                                    <td></td>
+                                    <td id="tbl-postcode" ></td>
+                                    <td id="tbl-postcode-price" ></td>
                                 </tr>
                                 <tr>
                                     <td colspan="2"><?php _e('Total', 'solar-calculator'); ?></td>
-                                    <td class="table-secondary"><?php _e('£1,972.25', 'solar-calculator'); ?></td>
+                                    <td class="table-secondary" id="tbl-total" ><?php _e('£1,972.25', 'solar-calculator'); ?></td>
                                 </tr>
 
                             </table>
