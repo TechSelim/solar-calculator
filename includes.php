@@ -19,6 +19,11 @@ function solarc_enqueue_script(){
     wp_enqueue_script( 'mainjs', plugin_dir_url( __FILE__ ) . 'js/main.js', array('jquery'), '1.0.0', true );
     wp_enqueue_script( 'scriptjs', plugin_dir_url( __FILE__ ) . 'js/script.js', array('jquery'), '1.0.0', true );
 
+    wp_localize_script( 'mainjs', 'solarc', [
+        'ajaxurl' => admin_url( 'admin-ajax.php' ),
+        'error'   => __( 'Something went wrong', 'solar-calculator' ),
+    ] );
+
 }
 
 add_action('wp_enqueue_scripts', 'solarc_enqueue_script');

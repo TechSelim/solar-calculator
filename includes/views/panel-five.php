@@ -3,7 +3,7 @@
             <span class="step-current">
                 <span class="step-current-content">
                     <span class="step-number">
-                        <span><?php _e('05', 'solar-calculator'); ?></span>/<?php _e('05', 'solar-calculator'); ?></span>
+                        <span><?php _e('06', 'solar-calculator'); ?></span>/<?php _e('06', 'solar-calculator'); ?></span>
                     </span>
                 </span>
             <div class="fieldset-flex">
@@ -11,7 +11,7 @@
                     <h2 class="mb-4"><?php _e('Final cost including VAT (VAT typically charged at 5%)', 'solar-calculator'); ?></h2>
                     <div class="estimatedPrice mb-4">
                         <p class="p-0 m-0"><?php _e('The final estimated price is', 'solar-calculator'); ?></p>
-                        <div class="price"><?php _e('£1,972.25', 'solar-calculator'); ?></div>
+                        <div class="price" id="total-price"><?php _e('0', 'solar-calculator'); ?></div>
                     </div>
                     <section class="contactInfo">
 
@@ -22,7 +22,7 @@
                                     <div class="input-group-prepend">
                                     <div class="input-group-text"><i class="fa fa-envelope"></i></div>
                                     </div>
-                                    <input type="text" class="form-control" id="email" >
+                                    <input type="text" class="form-control" id="email" name="email" placeholder="Email" >
                                 </div>
                             </div>  
                             <div class="col">
@@ -31,7 +31,7 @@
                                 <div class="input-group-prepend">
                                     <div class="input-group-text"><i class="fa fa-user"></i></div>
                                 </div>
-                                <input type="text" class="form-control" id="name" >
+                                <input type="text" class="form-control" placeholder="Name" id="name" name="name" >
                                 </div>
                             </div> 
                         </div>
@@ -44,7 +44,7 @@
                                 <div class="input-group-prepend">
                                     <div class="input-group-text"><i class="fa fa-map-marker"></i></div>
                                 </div>
-                                <input type="text" class="form-control" id="post_code" >
+                                <input type="text" class="form-control" id="post_code" name="postcode2" placeholder="Post Code" >
                                 </div>
                             </div>
                             <div class="col">
@@ -53,7 +53,7 @@
                                     <div class="input-group-prepend">
                                     <div class="input-group-text"><i class="fa fa-phone"></i></div>
                                     </div>
-                                    <input type="text" class="form-control" id="phone">
+                                    <input type="text" class="form-control" id="phone" placeholder="Phone" name="phone" >
                                 </div>
                             </div> 
 
@@ -66,7 +66,7 @@
                                 <div class="input-group-prepend">
                                     <div class="input-group-text"><i class="fa fa-home"></i></div>
                                 </div>
-                                <input type="text" class="form-control" id="address">
+                                <input type="text" class="form-control" id="address" placeholder="Address" name="address" >
                                 </div>
                                 <small>
                                 <?php _e('Optional - we always reply to enquiries by email and will not call under any circumstances unless you specifically request a callback.', 'solar-calculator'); ?> 
@@ -94,12 +94,14 @@
                                     <th><?php _e('Price', 'solar-calculator'); ?></th>
                                 </tr>
                                 <tr class="text-center bg-dark  text-white">
-                                    <th colspan="3"><?php _e('No. of Panels', 'solar-calculator'); ?></th>
-                                </tr>
-                                <tr>
-                                    <td><?php _e('Your Solar Panels', 'solar-calculator'); ?></td>
+                                    <td><?php _e('No. of Panels', 'solar-calculator'); ?></td>
                                     <td id="tbl-total-panel" ></td>
                                     <td id="tbl-total-panel-price" ></td>
+                                </tr>
+                                <tr>
+                                    <td><?php _e('Property Type', 'solar-calculator'); ?></td>
+                                    <td id="tbl-total-property" ></td>
+                                    <td id="tbl-total-property-price" ></td>
                                 </tr>
                                 <tr class="table-dark">
                                     <th colspan="3"><?php _e('System Details (Optional)', 'solar-calculator'); ?></th>
@@ -127,10 +129,23 @@
                                     <td id="tbl-postcode" ></td>
                                     <td id="tbl-postcode-price" ></td>
                                 </tr>
+                                <tr class="table-dark">
+                                    <th colspan="3"><?php _e('Others', 'solar-calculator'); ?></th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" ><?php _e('Inverter', 'solar-calculator'); ?></td>
+                                    <td id="tbl-inverter-price" ></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" ><?php _e('Installation', 'solar-calculator'); ?></td>
+                                    <td id="tbl-installation-price" ></td>
+                                </tr>
                                 <tr>
                                     <td colspan="2"><?php _e('Total', 'solar-calculator'); ?></td>
                                     <td class="table-secondary" id="tbl-total" ><?php _e('£1,972.25', 'solar-calculator'); ?></td>
                                 </tr>
+
+                                <input type="hidden" name="action" value="solarc_action" >
 
                             </table>
                         </div>

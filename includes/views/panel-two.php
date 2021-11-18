@@ -3,7 +3,7 @@
     <span class="step-current"> 
         <span class="step-current-content">
             <span class="step-number">
-                <span><?php _e('02', 'solar-calculator'); ?></span>/<?php _e('05', 'solar-calculator'); ?></span>
+                <span><?php _e('02', 'solar-calculator'); ?></span>/<?php _e('06', 'solar-calculator'); ?></span>
         </span> 
         </span>
     <div class="fieldset-flex">
@@ -12,7 +12,7 @@
             <h2><?php _e('No. of Panels', 'solar-calculator'); ?></h2>
             <p><?php _e('How many solar panels do you have installed? If you have more than 20 panels installed, please call for a custom quote.', 'solar-calculator'); ?></p>
 
-            <div class="pils mt-4 pt-4">
+            <!-- <div class="pils mt-4 pt-4">
                 <p class="btn-switch">                  
                     <input type="radio" id="yes" name="switch" value="1" class="btn-switch__radio btn-switch__radio_yes" />       
                     <input type="radio" checked id="no" value="1" name="switch" class="btn-switch__radio btn-switch__radio_no" />       
@@ -72,9 +72,11 @@
                     <label for="no5" class="btn-switch__label btn-switch__label_no">
                         <span class="btn-switch__txt"><?php _e('19-20', 'solar-calculator'); ?></span>
                     </label>      
-                    <input type="hidden" name="panel_no" id="panel_no" value="0" >                     
                 </p>
-            </div>
+            </div> -->
+            <div class="text-center">
+                <input type="number" class="mt-4 text-center" style="max-width: 300px; margin: 10px auto;" name="panel_no" id="panel_no" >
+            </div>                     
 
         </div>
     </div>

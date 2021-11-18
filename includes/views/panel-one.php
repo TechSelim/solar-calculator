@@ -1,7 +1,7 @@
 <h3></h3>
 <fieldset>
     <span class="step-current"> <span class="step-current-content"><span class="step-number">
-        <span><?php _e('01', 'solar-calculator'); ?></span>/<?php _e('05', 'solar-calculator'); ?></span></span> 
+        <span><?php _e('01', 'solar-calculator'); ?></span>/<?php _e('06', 'solar-calculator'); ?></span></span> 
     </span>
     <div class="fieldset-flex" >
         

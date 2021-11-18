@@ -101,7 +101,15 @@
     $('#postcode').on('keyup', function(e){
         e.preventDefault();
         var code = $(this).val();
-        $.ajax({
+        if( code ){
+            let els = document.querySelectorAll("a[href='#next']");
+            if( els[0] ) els[0].style.display = 'block';
+        }else{
+            let els = document.querySelectorAll("a[href='#next']");
+            if( els[0] ) els[0].style.display = 'none';
+        }
+
+        /* $.ajax({
             url: "https://api.postcodes.io/postcodes/" + code,
             type: 'GET',
             dataType: 'json', 
@@ -148,7 +156,7 @@
                 let els = document.querySelectorAll("a[href='#next']");
                     if(els[0]) els[0].style.display = 'none';
             }
-        });
+        }); */
     })
 
     $('#installation_date').datepicker( {
@@ -157,5 +165,28 @@
         todayHighlight: true,
         startDate: '+0d',
     } );
+
+    $('#panel_no').on('keyup', function(e){
+        e.preventDefault();
+        var noPanel = $(this).val();
+        if( noPanel > 0 && noPanel < 19 ){
+            var els = document.querySelectorAll("a[href='#next']");
+            if(els[0]){
+                els[0].style.display = 'block';
+            }
+        }else if( noPanel >= 19 ){
+            alert('Please contact us for a price.');
+            var els = document.querySelectorAll("a[href='#next']");
+            if(els[0]){
+                els[0].style.display = 'block';
+            }
+            $(this).val(18);
+        }else{
+            var els = document.querySelectorAll("a[href='#next']");
+            if(els[0]){
+                els[0].style.display = 'none';
+            }
+        }
+    });
 
 })(jQuery);

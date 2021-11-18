@@ -5,6 +5,7 @@ trait shortcodeTrait{
     function panelWrapBegin(){
         return '<div class="solaorc">
                     <div class="container">
+                        <div id="feed" class="alert alert-success d-none"></div>
                         <form method="POST" id="signup-form" class="signup-form" >';
     }
     
@@ -17,6 +18,12 @@ trait shortcodeTrait{
     function panelOne(){
         ob_start();
         include_once 'views/panel-one.php';
+        return ob_get_clean();   
+    }
+    
+    function needIntallation(){
+        ob_start();
+        include_once 'views/nedd-installation.php';
         return ob_get_clean();   
     }
     
